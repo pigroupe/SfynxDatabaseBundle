@@ -4,7 +4,7 @@
   "description": "This Bundle provides classes and commands to run DB vendor`s utilities to backup and restore databases.",
   "keywords": ["database", "backup", "restore", "dump"],
   "homepage": "http://pigroupe.github.io/cmf-sfynx/",
-  "license": "MIT",
+  "license": "LGPL-3.0+",
   "authors": [
     {
       "name": "Etienne de Longeaux",
