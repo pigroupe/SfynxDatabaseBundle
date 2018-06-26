@@ -453,17 +453,19 @@ abstract class AbstractManager implements DatabaseManagerInterface
      */
     protected function setPath(Array $options = null)
     {
-        if ( isset($options['path']) && !empty($options['path']) )
+        if (isset($options['path']) && !empty($options['path'])) {
             $path = $options['path'];
-        else
+        } else {
             $path = $this->getContainer()->get('kernel')->getRootDir() . '\cache\Backup';
+        }
         
-        if ( isset($options['filename']) && !empty($options['filename']) )
+        if (isset($options['filename']) && !empty($options['filename'])) {
             $filename = '/' . $options['filename'];
-        else
+        } else {
             $filename = '/doctrine_backup_database-' . $this->getDatabase() . '_' . date('Y-m-d-H-i-s') . '.sql';
+        }
         
-        if (\Sfynx\ToolBundle\Util\PiFileManager::mkdirr($path, 0777)) {
+        if (\Sfynx\ToolBundle\Util\PiFileManager::mkdirr($path)) {
             $this->path = realpath($path);
             $this->path = $this->path . $filename;
         }
@@ -544,7 +546,5 @@ abstract class AbstractManager implements DatabaseManagerInterface
     {
         $listTableDetails = $this->getSchemaManager()->listTableDetails($nameTable);
         return $listTableDetails->getColumns();
-    }    
-
-
+    }
 }

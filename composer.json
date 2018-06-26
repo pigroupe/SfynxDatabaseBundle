@@ -4,7 +4,7 @@
   "description": "This Bundle provides classes and commands to run DB vendor`s utilities to backup and restore databases.",
   "keywords": ["database", "backup", "restore", "dump"],
   "homepage": "http://pigroupe.github.io/cmf-sfynx/",
-  "license": "LGPL-3.0+",
+  "license": "LGPL-3.0-or-later",
   "authors": [
     {
       "name": "Etienne de Longeaux",
@@ -17,7 +17,9 @@
   ],
 
   "require": {
-    "symfony/framework-bundle": "~2.3"
+    "symfony/framework-bundle": "~2.3",
+    "sfynx-project/tool-utils-bundle": "~2.8.1",
+    "doctrine/orm": "^2.5"
   },
 
   "require-dev": {

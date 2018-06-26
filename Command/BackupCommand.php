@@ -105,7 +105,7 @@ EOT
         $fileName            = $input->getArgument('filename') ? $input->getArgument('filename') : null;
         
         $container             = $this->getContainer();
-        $DatabaseManager     = $container->get('bootstrap.database.factory');
+        $DatabaseManager     = $container->get('sfynx.database.factory');
         $output             = $DatabaseManager->getBackupFactory()->run($output, array('path'=>$path, 'filename'=>$fileName));
 
         //-----we close the logger-----
