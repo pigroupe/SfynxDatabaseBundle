@@ -17,9 +17,10 @@
   ],
 
   "require": {
-    "symfony/framework-bundle": "~2.3",
-    "sfynx-project/tool-utils-bundle": "~2.8.1",
-    "doctrine/orm": "^2.5"
+    "symfony/framework-bundle": "~2.8|~3.0",
+    "symfony/console": "*",
+    "doctrine/orm": "^2.5",
+    "sfynx-project/tool-utils-bundle": "~2.8.1"
   },
 
   "require-dev": {
