@@ -22,7 +22,7 @@ use Symfony\Component\Console\Input\InputOption;
  * Command to create a new backup of the database.
  *
  * <code>
- *         php app/console sfynx:database:backup app\cache\Backup doctrine_backup_database-default.sql
+ *         php app/console sfynx:database:backup data/cache/Backup doctrine_backup_database-default.sql
  *         php app/console sfynx:database:backup app/cache/Backup doctrine_backup_database-default.sql
  * </code>
  *
